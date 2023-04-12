@@ -1,3 +1,7 @@
+---
+import ButtonWhite from "../../components/ButtonWhite.astro";
+---
+
 <section id='heroSection' class='min-h-screen flex'>
   <div class='flex pt-20 h-screen'>
     <div class='flex pl-28 pr-8 items-center w-7/12'>
@@ -11,30 +15,47 @@
           DEVELOPMENT
         </p>
         <a class='w-fit flex' href='#'>
-          <button class='bg-white px-6 py-1 text-black'>Contact</button>
+          <ButtonWhite title='CONTACT' />
         </a>
       </div>
     </div>
-    <div class="h-full w-5/12">
-        <div class="h-full relative w-full">
-            <img class="object-cover w-full h-full" src="/heroimg.jpg" alt="">
-            <div class="w-full absolute bottom-0 grid grid-cols-3">
-                <a class="flex w-full" href=""><div class="flex h-36 items-center justify-center bg-[#000000]/40 backdrop-blur-sm w-full"><p> FB</p></div></a>
-                <a class="flex w-full" href=""><div class="flex h-36 items-center justify-center bg-[#000000]/40 backdrop-blur-sm w-full"><p> FB</p></div></a>
-            
-                <a class="flex w-full" href=""><div class="flex h-36 items-center justify-center bg-[#000000]/40 backdrop-blur-sm w-full"><p> FB</p></div></a>
-            
-            
-            </div>
+    <div class='h-full w-5/12'>
+      <div class='h-full relative w-full'>
+        <img class='object-cover w-full h-full' src='/heroimg.jpg' alt='' />
+        <div class='w-full absolute bottom-0 grid grid-cols-3'>
+          <a class='flex w-full' href=''
+            ><div
+              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+            >
+              <p class="text-lg">FB</p>
+              <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
+            </div></a
+          >
+          <a class='flex w-full' href=''
+            ><div
+              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+            >
+            <p class="text-lg">FB</p>
+            <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
+            </div></a
+          >
+
+          <a class='flex w-full' href=''
+            ><div
+              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+            >
+            <p class="text-lg">FB</p>
+            <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
+            </div></a
+          >
         </div>
-        
+      </div>
     </div>
-   
   </div>
 </section>
 <style>
   #heroSection {
     background-image: url("/heroBg.jpg");
-    background-size: cover;
+    background-size: auto;
   }
 </style>

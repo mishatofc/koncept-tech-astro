@@ -46,6 +46,24 @@ const { title } = Astro.props;
     @apply mx-28;
   }
 
+  .btn{
+    box-shadow: 4px 4px 0px #296F6D;
+    @apply hover:bg-gray-100 active:shadow-none transition-all duration-200 ease-out;
+
+  }
+
+  button:hover {
+    @apply duration-150 transition-all;
+  }
+  .button:active {
+    @apply duration-150 transition-all;
+  }
+  .button:hover .img1 {
+    @apply -translate-y-[200%];
+  }
+  .button:hover .img2 {
+    @apply -translate-y-[0%];
+  }
   main{
 	
   }
