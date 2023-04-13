@@ -1,10 +1,14 @@
-<section id='learnSection' class='min-h-screen bg-[#070707]'>
+---
+import ButtonWhite from "../../components/ButtonWhite.astro";
+---
+
+<section id='learnSection' class='min-h-screen background-grid bg-[#070707]'>
   <div class='py-20 wrapper'>
-    <div class='flex flex-col md:flex-row md:justify-between'>
+    <div class='flex flex-col items-center md:flex-row md:justify-between'>
       <div class='h-full'>
         <img class='object-cover' src='/learning.png' alt='' />
       </div>
-      <div class='flex flex-col gap-8 max-w-2xl text-right'>
+      <div class='flex flex-col max-w-2xl text-right'>
         <!-- <div class="flex flex-col float-right">
                 <h4 class="text-[#787878] flex font-orbitron text-xl float-right font-extrabold">WANTING TO</h4>
                 <h2 class="text-5xl flex float-right">LEARN?</h2> -->
@@ -14,14 +18,33 @@
         >
           WANTING TO
         </h4>
-        <h2 class='text-6xl'>LEARN?</h2>
-        <p>
-          WE OFFER COURSES IN C++, JAVA, PYTHON, AND C LANGUAGE, FROM BASIC TO
-          ADVANCED LEVELS. OUR COURSES START FROM AS LOW AS 3500 TAKA ONLY AND
+        <h2 class='text-6xl font-orbitron font-extrabold'>LEARN?</h2>
+        <p class='mt-8 text-[#c1c1c1]'>
+          WE OFFER COURSES IN <b class="text-white">C++, JAVA, PYTHON, AND C LANGUAGE,</b>  FROM BASIC TO
+          ADVANCED LEVELS. OUR COURSES START FROM <b class="text-white">AS LOW AS 3500 TAKA ONLY</b>  AND
           ARE TAUGHT BY EXPERIENCED INSTRUCTORS WHO WILL GUIDE YOU EVERY STEP OF
           THE WAY.
         </p>
+        <div class="mt-8">
+          <a class='w-fit flex float-right' href='/courses'>
+            <ButtonWhite title='Enroll now' />
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* .background-grid {
+  background-image: linear-gradient(#293030 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #2c3232 calc(100% - 1.5px)), linear-gradient(90deg, #222626 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #1e2222 calc(100% - 1.5px));
+  background-size: 4.545454545454546% 6.666666666666667%;
+  border: 1.5px solid #262c2c;
+} */
+
+  /* #learnSection{
+  background-image: linear-gradient(rgba(44, 66, 65, 0.412) .1em, transparent .1em), linear-gradient(90deg, rgba(44, 66, 65, 0.412) .1em, transparent .1em);
+  background-size: 3em 3em;
+
+} */
+</style>
