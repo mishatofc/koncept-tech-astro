@@ -3,9 +3,9 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
 
 ---
 
-<section id='buildSection' class='min-h-screen background-grid bg-[#070707]'>
-    <div class='py-20 wrapper'>
-      <div class='flex flex-col items-center md:flex-row md:justify-between'>
+<section id='buildSection' class='min-h-max background-grid bg-[#070707]'>
+    <div class='py-40 horizontalWrapper'>
+      <div class='flex gap-16 flex-col items-center md:flex-row md:justify-between'>
           <div class='flex flex-col max-w-2xl'>
             <!-- <div class="flex flex-col float-right">
                     <h4 class="text-[#787878] flex font-orbitron text-xl float-right font-extrabold">WANTING TO</h4>
@@ -16,7 +16,7 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
             >
               WANTING TO
             </h4>
-            <h2 class='text-6xl font-orbitron font-extrabold'>BUILD?</h2>
+            <h2 class='text-4xl sm:text-5xl lg:text-6xl font-orbitron font-extrabold'>BUILD?</h2>
             <p class="mt-8">
                 WE ARE A TEAM OF EXPERIENCED SOFTWARE DEVELOPERS, WEB DEVELOPERS, AND AI EXPERTS/ENGINEERS WHO CAN CREATE CUSTOM SOFTWARE, WEBSITES, AND WEB-BASED APPS TO FIT YOUR NEEDS. OUR SERVICES INCLUDE AI-BASED SOLUTIONS THAT ARE CUTTING-EDGE AND INNOVATIVE.
             </p>
@@ -26,9 +26,7 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
                 </a>
               </div>
           </div>
-        <div class='h-full'>
-          <img class='object-cover' src='/building.png' alt='' />
-        </div>
+         <img class='object-cover md:max-w-[20rem]' src='/building.png' alt='' />
       </div>
     </div>
   </section>

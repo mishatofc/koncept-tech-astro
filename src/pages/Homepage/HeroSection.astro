@@ -3,10 +3,10 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
 ---
 
 <section id='heroSection' class='min-h-screen flex'>
-  <div class='flex pt-20 h-screen'>
-    <div class='flex pl-28 pr-8 items-center w-7/12'>
+  <div class='flex flex-col gap-8 lg:flex-row pt-20 min-h-screen'>
+    <div class='flex py-28 mx-6 lg:mx-0 lg:pl-[11rem] pr-8 items-center lg:w-7/12'>
       <div class='flex flex-col gap-8'>
-        <h1 class='text-7xl font-orbitron font-black'>
+        <h1 class='text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-orbitron font-black'>
           Bringing the future closer
         </h1>
         <p>
@@ -19,13 +19,13 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
         </a>
       </div>
     </div>
-    <div class='h-full w-5/12'>
+    <div class='h-full lg:w-5/12'>
       <div class='h-full relative w-full'>
-        <img class='object-cover w-full h-full' src='/heroimg.jpg' alt='' />
-        <div class='w-full absolute bottom-0 grid grid-cols-3'>
+        <img class='object-cover md:w-full md:h-full' src='/heroimg.jpg' alt='' />
+        <div class='w-full absolute bottom-0 hidden lg:grid grid-cols-3'>
           <a class='flex w-full' href=''
             ><div
-              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+              class='flex gap-4 border border-gray-600 h-20 lg:h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
             >
               <p class="text-lg">FB</p>
               <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
@@ -33,7 +33,7 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
           >
           <a class='flex w-full' href=''
             ><div
-              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+              class='flex gap-4 border border-gray-600 h-20 lg:h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
             >
             <p class="text-lg">FB</p>
             <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
@@ -42,7 +42,7 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
 
           <a class='flex w-full' href=''
             ><div
-              class='flex gap-4 border border-gray-600 h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
+              class='flex gap-4 border border-gray-600 h-20 lg:h-36 items-center justify-center bg-[#000000]/40 hover:backdrop-blur-none duration-200 ease-out backdrop-blur-sm w-full'
             >
             <p class="text-lg">FB</p>
             <img class="w-4 h-4" src="/arrowWhiteUpwards.svg" alt="">
