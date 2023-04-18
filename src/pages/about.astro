@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title='About Us'>
   <section class='py-20 bg-[#070707] min-h-screen'>
-    <div class='img-gradient'>
+    <div class='img-gradient aboutImage opacity-0 blur-[18px]'>
       <img
         class='z-0 w-full object-cover max-h-[70vh]'
         src='/koncepttechppls.jpg'
@@ -15,24 +15,25 @@ import Layout from "../layouts/Layout.astro";
       class='firstHorizontalWrapper leading-relaxed text-gray-400 flex flex-col gap-8'
     >
       <h1
-        class='text-3xl md:text-4xl z-10 -mt-36 mb-8 leading-tight font-orbitron tracking-wide text-gray-200'
+        class='text-3xl aboutTitle md:text-4xl z-10 -mt-36 mb-8 leading-tight font-orbitron tracking-wide text-gray-200'
       >
         Koncept-Tech, a leading software development company based in Dhaka,
         Bangladesh.
       </h1>
-      <p class='indent-8'>
+     
+      <p class='indent-8 paragraph'>
         Specializing in <b class='text-gray-200'
           >custom software, web applications, and AI-based solutions.</b
         > Our innovative approach and commitment to excellence set us apart as we
         work towards transforming the future of technology.
       </p>
-      <p class='indent-8'>
+      <p class='indent-8 paragraph'>
         Founded and run by <b class="text-gray-300"> North South University alumni</b>, Koncept-Tech is proud
         of its roots and dedication to providing exceptional software
         development services.
       </p>
 
-      <p class="indent-8">
+      <p class="indent-8 paragraph">
         Our team of experienced <b class='text-gray-300'>
           software developers, web developers, and AI experts
         </b> is passionate about delivering scalable, robust, and efficient solutions
@@ -45,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
         >, as well as <b class='text-gray-300'>
           custom hardware design, including 3D printing.</b>
       </p>
-      <p class="indent-8">
+      <p class="indent-8 paragraph">
         We are also actively engaged in the development of <b class="text-gray-300"> military-grade
         artificial intelligence-enhanced drones, smartphone products, and
         various other AI-enhanced projects.</b> These advanced technologies are
@@ -60,13 +61,14 @@ import Layout from "../layouts/Layout.astro";
         ever-evolving tech industry. Join us at Koncept-Tech as we shape the
         future of technology together.
       </p>
-      <div class='mt-20 indent-8 text-gray-300'>
+      <div class='mt-20 paragraph indent-8 text-gray-300'>
         <p class="italic text-sm">
         Follow our <a class="underline underline-offset-2" target="_blank" href="https://www.facebook.com/profile.php?id=100089231107942">Facebook page</a>  for updates on our latest projects, services,
         and achievements. To learn more about our services or to discuss how we
         can help you achieve your goals, please don't hesitate to <a class="underline underline-offset-2" href="/contact">contact us.</a> </p>
       </div>
     </div>
+    
   </section>
 </Layout>
 
@@ -76,3 +78,32 @@ import Layout from "../layouts/Layout.astro";
   }
  
 </style>
+<script>
+  import gsap from 'gsap';
+  const body = document.querySelector("body");
+  body.onload = function () {
+
+  gsap.from(['.aboutTitle', '.paragraph'], {
+    opacity: 0,
+    y: 80,
+    duration: 1.8,
+    ease: 'Expo.easeOut',
+    stagger: 0.6,
+
+  })
+  gsap.from('.aboutImage', {
+    opacity: 0,
+  
+
+  })
+  gsap.to('.aboutImage', {
+    opacity: 1,
+    filter: 'blur(0px)',
+   
+    duration: 1.8,
+    ease: 'Expo.easeOut'
+
+  })
+}
+
+</script>

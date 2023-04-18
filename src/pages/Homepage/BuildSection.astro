@@ -6,7 +6,7 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
 <section id='buildSection' class='min-h-max background-grid bg-[#070707]'>
   <!-- <div class="border mx-6 horizontalWrapper border-gray-600 border-1 border-dashed"></div> -->
     <div class='py-40 horizontalWrapper'>
-      <div class='flex gap-16 flex-col items-center md:flex-row md:justify-between'>
+      <div class='flex opacity-0 buildSectionTrigger gap-16 flex-col items-center md:flex-row md:justify-between'>
           <div class='flex flex-col max-w-2xl'>
             <!-- <div class="flex flex-col float-right">
                     <h4 class="text-[#787878] flex font-orbitron text-xl float-right font-extrabold">WANTING TO</h4>
@@ -31,3 +31,38 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
       </div>
     </div>
   </section>
+
+
+
+  <script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from('.buildSectionTrigger', {
+            y: 50,
+            opacity: 0,
+
+            
+        })
+  gsap.to('.buildSectionTrigger', {
+            y: 0,
+            opacity: 1,
+            ease: 'Expo.easeOut',
+            duration: 1.4,
+            delay: 0.2,
+            scrollTrigger: {
+                trigger: '.buildSectionTrigger',
+                start: "top bottom",
+                // end: "top top",
+                // scrub: true,
+          
+                // markers: true,
+                // id: "scrub",
+            }
+        })
+
+
+
+
+  </script>
