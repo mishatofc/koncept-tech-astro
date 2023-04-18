@@ -37,8 +37,9 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
 <script>
   import gsap from 'gsap';
   let tl = gsap.timeline();
+  const body = document.querySelector('body');
 
-  window.onload = function(){
+  body.onload = function(){
     tl.from('.heroTitle', {
     opacity: 0,
     y: 80,
