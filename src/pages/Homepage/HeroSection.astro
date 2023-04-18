@@ -6,22 +6,22 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
   <div class='flex firstHorizontalWrapper flex-col gap-8 lg:flex-row pt-20 min-h-screen'>
     <div class='flex pt-20 lg:pt-0 items-center lg:w-7/12'>
       <div class='flex flex-col gap-8'>
-        <h1 class='text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-orbitron font-black'>
+        <h1 class='text-4xl heroTitle lg:text-5xl xl:text-6xl 2xl:text-7xl font-orbitron font-black'>
           Bringing the future closer
         </h1>
-        <p>
+        <p class="heroSubtitle">
           FOUNDED AND RUN BY NSU ALUMNI, WE TAKE PRIDE IN OUR ROOTS AT NORTH
           SOUTH UNIVERSITY AND OUR COMMITMENT TO EXCELLENCE IN SOFTWARE
           DEVELOPMENT.  <a class="underline underline-offset-2" href="/about">LEARN ABOUT US</a>
         </p>
-        <a class='w-fit flex' href='/contact'>
+        <a class='w-fit heroCtabtn flex' href='/contact'>
           <ButtonWhite title='CONTACT' />
         </a>
       </div>
     </div>
     <div class='h-full pb-10 lg:pb-0 lg:w-5/12'>
-      <div class='h-full relative w-full'>
-        <img class='md:w-full md:h-full' src='/neural-network-brain.svg' alt='' />
+      <div class='h-full w-full'>
+        <img class='md:w-full heroImage md:h-full' src='/neural-network-brain.svg' alt='' />
         
       </div>
     </div>
@@ -33,3 +33,62 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
     background-size: auto;
   }
 </style>
+
+<script>
+  import gsap from 'gsap';
+  let tl = gsap.timeline();
+
+  window.onload = function(){
+    tl.from('.heroTitle', {
+    opacity: 0,
+    y: 80,
+    duration: 1,
+    ease: 'Expo.easeOut'
+
+  })
+  tl.from([ '.heroSubtitle', '.heroCtabtn', ], {
+      opacity: 0,
+      y: 80,
+      duration: 1,
+      ease: 'Expo.easeOut',
+      stagger: 1,
+      
+  }, '-=0.4')
+  tl.from('.heroImage', {
+    opacity: 0,
+    skewY: 5,
+    skewX: 5,
+    y: 80,
+    ease: 'Expo.easeOut',
+
+  })
+
+
+
+
+  } 
+  // tl.from('.heroTitle', {
+  //   opacity: 0,
+  //   y: 80,
+  //   duration: 1,
+  //   ease: 'Expo.easeOut'
+
+  // })
+  // tl.from([ '.heroSubtitle', '.heroCtabtn', ], {
+  //     opacity: 0,
+  //     y: 80,
+  //     duration: 1,
+  //     ease: 'Expo.easeOut',
+  //     stagger: 1,
+      
+  // }, '-=0.4')
+  // tl.from('.heroImage', {
+  //   opacity: 0,
+  //   skewY: 5,
+  //   skewX: 5,
+  //   y: 80,
+  //   ease: 'Expo.easeOut',
+
+  // })
+
+</script>
