@@ -4,17 +4,25 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title='Courses we provide'>
   <section class='bg-[#070707] py-20 min-h-screen'>
+    <div class='img-gradient'>
+      <img
+        class='z-[-1] w-full object-cover max-h-[70vh]'
+        src='/coursesImage.jpg'
+        alt=''
+      />
+    </div>
     <main class='firstHorizontalWrapper'>
       <div class='mx-auto max-w-3xl'>
-        <h2 class='text-lg font-orbitron mb-20 font-bold'>
-          Please fill out the form below
+        <div class="z-10 relative">
+        <h2 class='-mt-36 mb-20'>
+          We offer a range of comprehensive programming courses in C, C++, Java, and Python, as well as IELTS and SAT preparation. Our accelerated courses, taught by experienced instructors, are designed to take individuals from beginner to expert level in just three months. We provide guidance and support every step of the way, empowering students to enhance their software development skills and thrive in the ever-evolving tech industry. Join us at Koncept-Tech as we shape the future of technology together.
         </h2>
-
+      </div>
         <form id='coursesForm' onsubmit="return validateForm()">
           <label
           for='course'
           class='block mb-2 text-sm font-medium text-white'
-          >Course name</label
+          >Select courses</label
         >
           <p id='checkbox-error' class='text-red-500 text-sm hidden py-2'>
             Please select at least one option.
