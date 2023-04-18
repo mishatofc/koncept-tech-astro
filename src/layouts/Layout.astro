@@ -24,7 +24,11 @@ const { title } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body onload="preloaderOff()">
+    <div class="preloader">
+      <div class="preloader-spin"></div>
+    </div>
+
     <Navbar />
     <main>
       <slot />
@@ -46,6 +50,7 @@ const { title } = Astro.props;
     background-image: linear-gradient(rgba(34, 37, 37, 0.467) .1em, transparent .1em), linear-gradient(90deg, rgba(34, 37, 37, 0.467) .1em, transparent .1em);
   background-size: 2em 2em;
   }
+  
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
@@ -94,5 +99,52 @@ const { title } = Astro.props;
     height: 100%;
     background: linear-gradient(360deg, #070707 0%, rgba(0, 0, 0, 0) 46.52%);
   }
+
+
+  
+
+
+
+
+
+.preloader {
+  position: fixed;
+  display: flex;
+ align-items: center;
+ place-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #070707;
+
+}
+
+.preloader-spin{
+  width: 50px;
+  height: 50px;
+  border: 5px solid #d7d7d7;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 </style>
 
+
+
+<script> 
+let preloader = document.querySelector('.preloader');
+window.addEventListener('load', function(){
+  preloader.style.display = "none";
+
+})
+
+</script>
