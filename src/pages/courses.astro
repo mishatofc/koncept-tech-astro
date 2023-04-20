@@ -1,16 +1,101 @@
 ---
+import ButtonWhite from "../components/ButtonWhite.astro";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Courses"> 
-    <main class="firstHorizontalWrapper min-h-screen">
-        <div class="mt-8">
-            <h2 class="text-5xl font-audiowide">Courses we provide</h2>
+<Layout title='Courses'>
+  <section class='py-20 min-h-screen'>
+    <div class='img-gradient courseImage opacity-0 blur-[18px]'>
+      <img
+        class='z-[-1] w-full object-cover max-h-[70vh]'
+        src='/coursesImage.jpg'
+        alt=''
+      />
+    </div>
+    <main class='firstHorizontalWrapper min-h-screen'>
+      <div class=''>
+        <div class='z-10 relative'>
+            <div class='-mt-36 mb-8'>
+                <h2 class='text-5xl font-audiowide text-amber-500'>Courses we provide</h2>
+              </div>
+          <h2 class='courseDesc mb-20 text-gray-200'>
+            We offer a range of comprehensive programming courses in C, C++,
+            Java, and Python, as well as IELTS and SAT preparation. Our
+            accelerated courses, taught by experienced instructors, are designed
+            to take individuals from beginner to expert level in just three
+            months. We provide guidance and support every step of the way,
+            empowering students to enhance their software development skills and
+            thrive in the ever-evolving tech industry. Join us at Koncept-Tech
+            as we shape the future of technology together.
+          </h2>
         </div>
-       <div class="grid grid-cols-3 w-full h-full">
-        <div>asd</div><div>asd</div><div>asd</div>
-       </div>
+      </div>
+      
+      <div class='grid justify-items-center mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 w-full h-full'>
+        <Card
+          title='C++'
+          body='some text and something more and more and more  and more and morand more and morand more and morand more and mordescription.'
+          href='/courses/cpp-card.png'
+        />
+        <Card
+          title='Java'
+          body='some text and something more and more and more description.'
+          href='/courses/java-card.png'
+        />
+        <Card
+          title='C'
+          body='some text and something more and more and more description.'
+          href='/courses/c-card.png'
+        />
+        <Card
+          title='Python'
+          body='some text and something more and more and more description.'
+          href='/courses/python-card.png'
+        />
+        <Card
+          title='IELTS'
+          body='some text and something more and more and more description.'
+          href='/courses/ielts-card.png'
+        />
+     
+      </div>
+
+      <a href="/enroll" class="mt-12 block w-fit">
+        <ButtonWhite title="Enroll Now" />
+
+      </a>
     </main>
-
-
+  </section>
 </Layout>
+<script>
+  import gsap from "gsap";
+  const body = document.querySelector("body");
+
+  body.onload = function () {
+    gsap.from(".courseDesc", {
+      opacity: 0,
+      y: 80,
+      duration: 1.8,
+      ease: "Expo.easeOut",
+    });
+    gsap.from(".courseImage", {
+      opacity: 0,
+      // filter: 'blur(18px)',
+    });
+    gsap.to(".courseImage", {
+      opacity: 1,
+      filter: "blur(0px)",
+
+      duration: 1.8,
+      ease: "Expo.easeOut",
+    });
+    gsap.from([".revealEl"], {
+      opacity: 0,
+      y: 80,
+      duration: 1.8,
+      ease: "Expo.easeOut",
+      stagger: 0.2,
+    });
+  };
+</script>
