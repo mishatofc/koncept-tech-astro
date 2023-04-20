@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'orbitron' : ['Orbitron', 'sans-serif'],
+				'audiowide' : ['Audiowide', 'cursive'],
 				'ibmPlex' : ['IBM Plex Mono', 'monospace']
 
 			},
