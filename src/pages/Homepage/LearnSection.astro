@@ -2,35 +2,43 @@
 import ButtonWhite from "../../components/ButtonWhite.astro";
 ---
 
-<section id='learnSection' class='min-h-max background-grid bg-[#070707]/0'>
-  <div class='py-40 flex items-center horizontalWrapper'>
+<section id="learnSection" class="min-h-max background-grid bg-[#070707]/0">
+  <div class="py-40 flex items-center horizontalWrapper">
     <div
-      class='flex learnSectionTrigger opacity-0 flex-col gap-16 items-center md:flex-row md:justify-between'
+      class="flex learnSectionTrigger opacity-0 flex-col gap-16 items-center md:flex-row md:justify-between"
     >
-      <img class='object-cover order-1 md:-order-none md:max-w-[20rem]' src='/learning.png' alt='' />
+      <img
+        class="object-cover order-1 md:-order-none md:max-w-[20rem]"
+        src="/learning.png"
+        alt=""
+      />
 
-      <div class='flex flex-col text-right'>
+      <div class="flex flex-col text-right">
         <!-- <div class="flex flex-col float-right">
                 <h4 class="text-[#787878] flex font-orbitron text-xl float-right font-extrabold">WANTING TO</h4>
                 <h2 class="text-5xl flex float-right">LEARN?</h2> -->
 
         <h4
-          class='text-[#787878] font-audiowide text-xl float-right font-extrabold '
+          class="text-[#787878] font-audiowide text-xl float-right font-extrabold"
         >
-          WANTING TO
+          WANT TO
         </h4>
-        <h2 class='text-4xl sm:text-5xl lg:text-6xl font-audiowide font-extrabold text-amber-500'>LEARN?</h2>
-        <p class='mt-8 text-[#c1c1c1]'>
-          WE OFFER COURSES IN <b class='text-white'
+        <h2
+          class="text-4xl sm:text-5xl lg:text-6xl font-audiowide font-extrabold text-amber-500"
+        >
+          LEARN?
+        </h2>
+        <p class="mt-8 text-[#c1c1c1]">
+          WE OFFER COURSES IN <b class="text-white"
             >C++, JAVA, PYTHON, AND C LANGUAGE,</b
           > FROM BASIC TO ADVANCED LEVELS. OUR COURSES START FROM <b
-            class='text-white'>AS LOW AS 3500 TAKA ONLY</b
+            class="text-white">AS LOW AS 3500 TAKA ONLY</b
           > AND ARE TAUGHT BY EXPERIENCED INSTRUCTORS WHO WILL GUIDE YOU EVERY STEP
           OF THE WAY.
         </p>
-        <div class='mt-8'>
-          <a class='w-fit flex float-right' href='/courses'>
-            <ButtonWhite title='Courses' />
+        <div class="mt-8">
+          <a class="w-fit flex float-right" href="/courses">
+            <ButtonWhite title="Courses" />
           </a>
         </div>
       </div>
@@ -38,40 +46,31 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
   </div>
 </section>
 
-<style>
-
-</style>
-
+<style></style>
 
 <script>
-  import gsap from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
-  
-  gsap.from('.learnSectionTrigger', {
-            y: 50,
-            opacity: 0,
 
-            
-        })
-  gsap.to('.learnSectionTrigger', {
-            y: 0,
-            opacity: 1,
-            ease: 'Expo.easeOut',
-            duration: 1.4,
-            delay: 0.2,
-            scrollTrigger: {
-                trigger: '.learnSectionTrigger',
-                start: "top bottom",
-                // end: "top top",
-                // scrub: true,
-          
-                // markers: true,
-                // id: "scrub",
-            }
-        })
+  gsap.from(".learnSectionTrigger", {
+    y: 50,
+    opacity: 0,
+  });
+  gsap.to(".learnSectionTrigger", {
+    y: 0,
+    opacity: 1,
+    ease: "Expo.easeOut",
+    duration: 1.4,
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: ".learnSectionTrigger",
+      start: "top bottom",
+      // end: "top top",
+      // scrub: true,
 
-
-
-
+      // markers: true,
+      // id: "scrub",
+    },
+  });
 </script>

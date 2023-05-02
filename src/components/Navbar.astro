@@ -1,99 +1,123 @@
-<nav class='w-full shadow-sm fixed top-0 left-0 navbarBg z-50 flex h-20'>
-    <div class='md:flex hidden items-center horizontalWrapper mx-auto w-full justify-between'>
-        <a class="text-xl flex items-center gap-4 font-audiowide font-bold" href="/"> <img class="w-10" src="/logo.svg" alt=""> <span>KONCEPT-TECH</span> </a>
-  
-        <div class="md:flex hidden gap-8">
-            <a class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out" href="/">home</a>
-            <a class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out" href="/courses">courses</a>
-            <a class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out" href="/about">about</a>
-            <a class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out" href="/contact">contact</a>
+<nav class="w-full shadow-sm fixed top-0 left-0 navbarBg z-50 flex h-20">
+  <div
+    class="md:flex hidden items-center horizontalWrapper mx-auto w-full justify-between"
+  >
+    <a
+      class="text-xl flex items-center gap-4 font-audiowide font-bold"
+      href="/"
+    >
+      <img class="w-10" src="/logo.svg" alt="" />
+      <span>KONCEPT-TECH</span>
+    </a>
 
-        </div>
-    </div>
-  
-    <div class='flex md:hidden w-screen'>
-      <div class='flex px-6 w-screen justify-between items-center'>
-        <a class="text-lg flex items-center gap-2 font-audiowide font-bold" href="/"> <img class="w-10" src="/logo.svg" alt=""> <span>KONCEPT-TECH</span> </a>
-  
-        <button id='menuButton' class='active:scale-95 duration-75 ease-out'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
-        </button>
-      </div>
-      <div
-       id="mobileNavMenu" class='flex flex-col items-center place-content-center -left-[100%] w-screen h-screen bg-[#000000] backdrop-blur-3xl z-[100] fixed'
+    <div class="md:flex hidden gap-8">
+      <a
+        class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out"
+        href="/">HOME</a
       >
-     
-        <div class='text-center font-medium'>
-          <ul class='flex flex-col gap-6'>
-            <a class='cursor-pointer text-lg uppercase mobileLink' href='/'><li>home</li></a>
-            <a class='cursor-pointer text-lg uppercase mobileLink' href='/courses'><li>courses</li></a>
-            <a class='cursor-pointer text-lg uppercase mobileLink' href='/about'><li>about</li></a>
-            <a class='cursor-pointer text-lg uppercase mobileLink' href='/contact'><li>contact</li></a>
-            
-          </ul>
-        </div>
-        <button
-          id='crossButton'
-          class='absolute shadow-lg active:scale-95 duration-75 ease-out bg-white p-4 rounded-full bottom-28'
-          ><svg
-          
-            xmlns='http://www.w3.org/2000/svg'
-            width='32'
-            height='32'
-            viewBox='0 0 15 15'
-            ><path
-            class=" fill-black"
-              fill='currentColor'
-              fill-rule='evenodd'
-              d='M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793L2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5l4.647-4.646Z'
-              clip-rule='evenodd'></path></svg
-          ></button
-        >
-      </div>
+      <a
+        class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out"
+        href="/courses">COURSES</a
+      >
+      <a
+        class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out"
+        href="/about">ABOUT</a
+      >
+      <a
+        class="hover:underline hover:text-amber-500 transition-all hover:underline-offset-4 capitalize duration-200 ease-out"
+        href="/contact">CONTACT</a
+      >
     </div>
-  </nav>
-  
-  <style>
-    #mobileNavMenu{
-      transition-duration: 500ms;
-      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  
-    }
-    .navbarBg{
-        @apply bg-[#000000]/10 backdrop-blur-md;
+  </div>
 
-    }
-  
-  </style>
-  
-  <script is:inline>
-    const menuBtn = document.querySelector("#menuButton");
-    const crossBtn = document.querySelector("#crossButton");
-    const mobileNavMenu = document.querySelector("#mobileNavMenu");
-    
-   
-  
-    menuBtn.addEventListener("click", function(){
-      mobileNavMenu.style.left = "0%"
-  
-  
+  <div class="flex md:hidden w-screen">
+    <div class="flex px-6 w-screen justify-between items-center">
+      <a
+        class="text-lg flex items-center gap-2 font-audiowide font-bold"
+        href="/"
+      >
+        <img class="w-10" src="/logo.svg" alt="" />
+        <span>KONCEPT-TECH</span>
+      </a>
+
+      <button id="menuButton" class="active:scale-95 duration-75 ease-out">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          ><path
+            fill="currentColor"
+            d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path></svg
+        >
+      </button>
+    </div>
+    <div
+      id="mobileNavMenu"
+      class="flex flex-col items-center place-content-center -left-[100%] w-screen h-screen bg-[#000000] backdrop-blur-3xl z-[100] fixed"
+    >
+      <div class="text-center font-medium">
+        <ul class="flex flex-col gap-6">
+          <a class="cursor-pointer text-lg uppercase mobileLink" href="/"
+            ><li>home</li></a
+          >
+          <a class="cursor-pointer text-lg uppercase mobileLink" href="/courses"
+            ><li>courses</li></a
+          >
+          <a class="cursor-pointer text-lg uppercase mobileLink" href="/about"
+            ><li>about</li></a
+          >
+          <a class="cursor-pointer text-lg uppercase mobileLink" href="/contact"
+            ><li>contact</li></a
+          >
+        </ul>
+      </div>
+      <button
+        id="crossButton"
+        class="absolute shadow-lg active:scale-95 duration-75 ease-out bg-white p-4 rounded-full bottom-28"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 15 15"
+          ><path
+            class="fill-black"
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793L2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5l4.647-4.646Z"
+            clip-rule="evenodd"></path></svg
+        ></button
+      >
+    </div>
+  </div>
+</nav>
+
+<style>
+  #mobileNavMenu {
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .navbarBg {
+    @apply bg-[#000000]/10 backdrop-blur-md;
+  }
+</style>
+
+<script is:inline>
+  const menuBtn = document.querySelector("#menuButton");
+  const crossBtn = document.querySelector("#crossButton");
+  const mobileNavMenu = document.querySelector("#mobileNavMenu");
+
+  menuBtn.addEventListener("click", function () {
+    mobileNavMenu.style.left = "0%";
+  });
+
+  crossBtn.addEventListener("click", function () {
+    mobileNavMenu.style.left = "-100%";
+  });
+
+  document.querySelectorAll(".mobileLink").forEach((n) =>
+    n.addEventListener("click", () => {
+      mobileNavMenu.style.left = "-100%";
     })
-  
-    crossBtn.addEventListener("click", function(){
-      mobileNavMenu.style.left = "-100%"
-      
-  
-    })
-  
-  
-    document.querySelectorAll(".mobileLink").forEach(n => n.addEventListener("click", () => {
-      mobileNavMenu.style.left = "-100%"
-  
-  
-  }))
-  
-  
-  
-  
-  
-  </script>
+  );
+</script>
