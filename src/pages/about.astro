@@ -1,4 +1,5 @@
 ---
+import Executive from "../components/executive.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -15,12 +16,12 @@ import Layout from "../layouts/Layout.astro";
       class='firstHorizontalWrapper leading-relaxed text-gray-400 flex flex-col gap-8'
     >
       <h1
-        class='text-3xl aboutTitle md:text-4xl z-10 -mt-36 mb-8 leading-tight font-audiowide tracking-wide text-gray-200'
+        class='text-3xl aboutTitle md:text-4xl xl:text-5xl z-10 -mt-36 mb-8 leading-tight font-audiowide tracking-wide text-gray-200'
       >
         Koncept-Tech, a leading software development company based in Dhaka,
         Bangladesh.
       </h1>
-      <p class='indent-8 paragraph'>
+      <p class='indent-8 revealEl'>
         Founded and run by the <b class="text-gray-300">NSU alumni</b> , we take price in our roots at North South University and our commitment to excellence in software development. Koncept-Tech is dedicated to providing exceptional software
         development services.
         Specializing in <b class='text-gray-200'
@@ -28,11 +29,20 @@ import Layout from "../layouts/Layout.astro";
         > Our innovative approach and commitment to excellence set us apart as we
         work towards transforming the future of technology.
       </p>
-      <!-- <p class='indent-8 paragraph'>
-        Founded and run by <b class="text-gray-300"> North South University alumni</b>
-      </p> -->
+    
 
-      <p class="indent-8 paragraph">
+
+      <div id="executive-section" class="py-20 revealEl">
+        <h3 class="text-3xl xl:text-4xl font-audiowide text-gray-200 ">Meet our executives</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-y-20 xl:gap-8 pt-20">
+          <Executive name="Mohammad Abdul" body="Lorem ipsum something something." href="/ex.png" />
+          <Executive name="Mohammad Abdul" body="Lorem ipsum something something." href="/ex.png" />
+          <Executive name="Mohammad Abdul" body="Lorem ipsum something something." href="/ex.png" />
+        </div>
+
+      </div>
+
+      <p class="indent-8 revealEl">
         Our team of experienced <b class='text-gray-300'>
           software developers, web developers, and AI experts
         </b> is passionate about delivering scalable, robust, and efficient solutions
@@ -45,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
         >, as well as <b class='text-gray-300'>
           custom hardware design, including 3D printing.</b>
       </p>
-      <p class="indent-8 paragraph">
+      <p class="indent-8 revealEl">
         We are also actively engaged in the development of <b class="text-gray-300"> military-grade
         artificial intelligence-enhanced drones, smartphone products, and
         various other AI-enhanced projects.</b> These advanced technologies are
@@ -60,11 +70,11 @@ import Layout from "../layouts/Layout.astro";
         ever-evolving tech industry. Join us at Koncept-Tech as we shape the
         future of technology together.
       </p>
-      <div class='mt-20 paragraph indent-8 text-gray-300'>
+      <div class='mt-20 revealEl indent-8 text-gray-300'>
         <p class="italic text-sm">
-        Follow our <a class="underline underline-offset-2" target="_blank" href="https://www.facebook.com/profile.php?id=100089231107942">Facebook page</a>  for updates on our latest projects, services,
+        Follow our <a class="underline text-amber-500 underline-offset-2" target="_blank" href="https://www.facebook.com/profile.php?id=100089231107942">Facebook page</a>  for updates on our latest projects, services,
         and achievements. To learn more about our services or to discuss how we
-        can help you achieve your goals, please don't hesitate to <a class="underline underline-offset-2" href="/contact">contact us.</a> </p>
+        can help you achieve your goals, please don't hesitate to <a class="underline text-amber-500 underline-offset-2" href="/contact">contact us.</a> </p>
       </div>
     </div>
     
@@ -82,7 +92,7 @@ import Layout from "../layouts/Layout.astro";
   const body = document.querySelector("body");
   body.onload = function () {
 
-  gsap.from(['.aboutTitle', '.paragraph'], {
+  gsap.from(['.aboutTitle', '.revealEl'], {
     opacity: 0,
     y: 80,
     duration: 1.8,
