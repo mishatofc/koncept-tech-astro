@@ -47,29 +47,33 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
   const body = document.querySelector("body");
 
   body.onload = function () {
-    tl.from(".heroTitle", {
-      opacity: 0,
-      y: 80,
-      duration: 1,
-      ease: "Expo.easeOut",
-    });
+    // tl.from(".heroTitle", {
+    //   opacity: 0,
+    //   y: 80,
+    //   skewX: 8,
+     
+    //   duration: 1,
+    //   ease: "Expo.easeOut",
+    // });
     tl.from(
-      [".heroSubtitle", ".heroCtabtn"],
+      [".heroTitle", ".heroSubtitle", ".heroCtabtn", ],
       {
         opacity: 0,
         y: 80,
+        skewX: 8,
         duration: 1,
         ease: "Expo.easeOut",
-        stagger: 1,
+        stagger: 0.4,
       },
       "-=0.4"
     );
     tl.from(".heroImage", {
       opacity: 0,
       skewY: 5,
-      skewX: 5,
+      // skewX: 5,
       y: 80,
+      duration: 2,
       ease: "Expo.easeOut",
-    });
+    }, "-=0.5");
   };
 </script>
