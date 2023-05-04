@@ -8,15 +8,20 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
   >
     <div class='flex pt-20 lg:pt-0 items-center lg:w-7/12'>
       <div class='flex flex-col gap-8'>
-        <h2
-          class='text-2xl heroTitle lg:text-5xl xl:text-4xl 2xl:text-4xl font-audiowide text-amber-500'
-          data-value="Bringing the future closer"
-        >
-          Bringing the future closer
-        </h2>
+        <div class="max-w-xl">
+          <h2
+            class='text-4xl heroTitle lg:text-5xl xl:text-5xl 2xl:text-6xl font-audiowide text-amber-500'
+            data-value='Bringing the future closer'
+          >
+            Bringing the future closer
+          </h2>
+        </div>
         <p class='heroSubtitle'>
-          Specializing in custom software, web applications, and AI-based solutions. Our innovative approach and commitment to excellence set us apart as we work towards transforming the future of technology. <a class='underline underline-offset-2' href='/about'
-            >Learn about us</a
+          Specializing in custom software, web applications, and AI-based
+          solutions. Our innovative approach and commitment to excellence set us
+          apart as we work towards transforming the future of technology. <a
+            class='underline underline-offset-2'
+            href='/about'>Learn about us</a
           >
         </p>
         <a class='w-fit heroCtabtn flex' href='/contact'>
@@ -52,12 +57,12 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
     //   opacity: 0,
     //   y: 80,
     //   skewX: 8,
-     
+
     //   duration: 1,
     //   ease: "Expo.easeOut",
     // });
     tl.from(
-      [".heroTitle", ".heroSubtitle", ".heroCtabtn", ],
+      [".heroTitle", ".heroSubtitle", ".heroCtabtn"],
       {
         opacity: 0,
         y: 80,
@@ -68,13 +73,17 @@ import ButtonWhite from "../../components/ButtonWhite.astro";
       },
       "-=0.4"
     );
-    tl.from(".heroImage", {
-      opacity: 0,
-      skewY: 5,
-      // skewX: 5,
-      y: 80,
-      duration: 2,
-      ease: "Expo.easeOut",
-    }, "-=0.5");
+    tl.from(
+      ".heroImage",
+      {
+        opacity: 0,
+        skewY: 5,
+        // skewX: 5,
+        y: 80,
+        duration: 2,
+        ease: "Expo.easeOut",
+      },
+      "-=0.5"
+    );
   };
 </script>
